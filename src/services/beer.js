@@ -12,9 +12,7 @@ const listBeers = () =>
         const beers = result.data;
         resolve(beers);
       })
-      .catch(error => {
-        reject(error);
-      });
+      .catch(reject);
   });
 
 const displayBeer = id =>
@@ -25,9 +23,7 @@ const displayBeer = id =>
         const beer = result.data;
         resolve(beer);
       })
-      .catch(error => {
-        reject(error);
-      });
+      .catch(reject);
   });
 
 const randomBeer = () =>
@@ -38,9 +34,18 @@ const randomBeer = () =>
         const beer = result.data;
         resolve(beer);
       })
-      .catch(error => {
-        reject(error);
-      });
+      .catch(reject);
   });
 
-export { listBeers, displayBeer, randomBeer };
+const saveBeer = newBeer =>
+  new Promise((resolve, reject) => {
+    instance
+      .post('/new', newBeer)
+      .then(result => {
+        const beer = result.data;
+        resolve(beer);
+      })
+      .catch(reject);
+  });
+
+export { listBeers, displayBeer, randomBeer, saveBeer };

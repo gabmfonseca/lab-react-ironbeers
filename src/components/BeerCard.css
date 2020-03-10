@@ -4,9 +4,14 @@
   color: black;
 }
 
+.beer-img {
+  margin-right: 20px;
+}
+
 .beer-img img {
   height: 10em;
   max-width: 6em;
+  align-self: center;
 }
 
 .beer-info {
@@ -14,7 +19,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  line-height: 0.5em;
+  max-width: 20em;
 }
 
 .beer-info-tagline {

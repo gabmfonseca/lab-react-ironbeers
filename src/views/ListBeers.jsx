@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from './../components/Header';
 import { listBeers } from './../services/beer';
 import BeerCard from '../components/BeerCard';
+import './ListBeers.css';
 
 class ListBeers extends Component {
   constructor(props) {

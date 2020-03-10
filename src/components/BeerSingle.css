@@ -22,6 +22,11 @@
   text-align: left;
 }
 
+.single-beer-img {
+  display: flex;
+  justify-content: center;
+}
+
 .single-beer-img img {
   height: 20em;
 }
