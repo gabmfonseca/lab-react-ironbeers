@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Header from './../components/Header';
 import { Form, Button } from 'react-bootstrap';
 import './NewBeer.css';
-import axios from 'axios';
 import { saveBeer } from './../services/beer';
 
 class NewBeer extends Component {
