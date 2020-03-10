@@ -1,0 +1,22 @@
+.beer-card {
+  display: flex;
+  text-decoration: none;
+  color: black;
+}
+
+.beer-img img {
+  height: 10em;
+  max-width: 6em;
+}
+
+.beer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  line-height: 0.5em;
+}
+
+.beer-info-tagline {
+  color: grey;
+}

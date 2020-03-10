@@ -1,0 +1,27 @@
+.single-beer {
+  padding: 1em;
+}
+
+.single-beer-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text-grey {
+  color: grey;
+}
+
+.single-beer-subtitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.single-beer-info {
+  text-align: left;
+}
+
+.single-beer-img img {
+  height: 20em;
+}
