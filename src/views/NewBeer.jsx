@@ -21,15 +21,15 @@ class NewBeer extends Component {
   }
 
   handleChange(event) {
-    const inputName = event.target.name;
+    const input = event.target.name;
     const value = event.target.value;
     this.setState({
-      [inputName]: value
+      [input]: value
     });
     console.log(this.state);
   }
 
-  addBeer(event) {
+  async addBeer(event) {
     event.preventDefault();
 
     const newBeer = {
@@ -42,11 +42,12 @@ class NewBeer extends Component {
       contributed_by: this.state.contributed_by
     };
 
-    saveBeer(newBeer)
-      .then(result => console.log('beer was created'))
-      .catch(error => {
-        console.log(error);
-      });
+    try {
+      const result = await saveBeer(newBeer);
+      console.log('beer was created', result);
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   render() {

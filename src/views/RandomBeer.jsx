@@ -15,17 +15,15 @@ class RandomBeer extends Component {
     this.fetchData();
   }
 
-  fetchData() {
-    randomBeer()
-      .then(beer => {
-        // console.log(beer);
-        this.setState({
-          beer
-        });
-      })
-      .catch(error => {
-        console.log(error);
+  async fetchData() {
+    try {
+      const beer = await randomBeer();
+      this.setState({
+        beer
       });
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   render() {

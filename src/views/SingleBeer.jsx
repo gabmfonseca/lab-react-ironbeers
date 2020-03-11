@@ -15,18 +15,16 @@ class SingleBeer extends Component {
     this.fetchData();
   }
 
-  fetchData() {
+  async fetchData() {
     const id = this.props.match.params.id;
-    displayBeer(id)
-      .then(beer => {
-        // console.log(beer);
-        this.setState({
-          beer
-        });
-      })
-      .catch(error => {
-        console.log(error);
+    try {
+      const beer = await displayBeer(id);
+      this.setState({
+        beer
       });
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   render() {
